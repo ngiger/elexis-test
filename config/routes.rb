@@ -1,6 +1,9 @@
 ElexisTest::Application.routes.draw do
+  get "product_versions/new"
+
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :product_versions
   # get "users/new"
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
