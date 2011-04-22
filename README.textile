@@ -1,6 +1,62 @@
-h1. Ruby on Rails Tutorial: sample application
+*Inhaltsverzeichnis*
 
-This is the sample application for
-[*Ruby on Rails Tutorial: Learn Rails by Example*](http://railstutorial.org/)
-by [Michael Hartl](http://michaelhartl.com/).
+{toc}
 
+
+h1. Elexis Test
+
+Dies ist ein kleines Ruby-On-Rails Programm, welches das Testen von Elexis Versionen vereinfachen soll.
+
+h2. Ziele
+
+Ziele für eine erste Version sind:
+
+* admin: Plug-Ins (Name, Beschreibung)
+** erstellen
+** bearbeiten
+** löschen
+
+* Testbeschreibe erstellen
+** solange höchstens ein Testresultat zugeordnet
+*** verändern
+*** löschen
+
+* admin: Versionen erstellen
+** plugin zu Versionen hinzufügen
+
+* admin: Testplan erstellen für Version erstellen
+
+* Testresultat erstellen, bearbeiten
+
+Falls zu einem späteren Zeitpunkt (GUI-)Tests automatisiert werden können, solen die Testbeschreibungen Grundlage für das erstellen dieser Tests liefern.
+
+h2. Ursprung
+
+Es basiert auf dem Beispiel "Sample App" aus em Buch "*Ruby on Rails Tutorial: Learn Rails by Example*":http://railstutorial.org/ von "Michael Hartl":http://michaelhartl.com/.
+
+Die Entwicklung wurde von COSRE GmbH, Yverdon gesponsert, damit eine französische Version von Elexis getestet werden kann und damit allen Interessierten (z.B. Anwendern, Entwicklern, Übersetzer) folgende Informationen zugänglich sind:
+
+# Welche Elexis-Version wurde getestet
+# Welches Plugin wurde getestet
+# Was wurde wie getestet
+# Wer hat wann getestet
+# Wie beurteilte der Tester das Resultat
+
+h2. Lizenz
+
+Steht unter der GNU Public License Version 2.0 oder später (GPL v2.0 or later)
+
+h2. Copyright
+
+2011 Copyright by Niklaus Giger, <niklaus.giger@member.fsf.org>
+
+h1. Kommt später
+
+* Gesamtübersicht aller Resultat pro Version
+* Testresultate pro Plug-In
+* Übersetzen, sa. "Rails i18n":http://guides.rubyonrails.org/i18n.html
+
+Ideen:
+
+* Mehrere Versionen pro Testbeschreibung (d.h. werden besser/genauer)?
+* E-Mail-Adressen vor dem Erfassen des neuen Benutzer verifizieren?
