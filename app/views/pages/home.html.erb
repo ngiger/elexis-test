@@ -1,19 +1,8 @@
-<h1>Elexis Test</h1>
-<p>
-	Dies ist eine Demo, welche Ideen aufzeigt wie
-	<a href="http://www.elexis.ch/">Elexis</a>
-	getestet werden könnte.
-</p>
-<li>
-	Dieses Programm wird von COSRE GmbH, Yverdon, gesponsort.
-</li>
-<li>
-	COSRE will damit die bestmögliche Qualtität der französische Version von Elexis sicherstellen.
-</li>
-<li>
-	Es gibt noch keinen Termin für die französische Version von Elexis.
-</li>
-<br>
+<h1><%=I18n.t :home_h1 %></h1>
+<%= raw RedCloth.new(I18n.t :home_p1).to_html %>
+<%= raw RedCloth.new(I18n.t :home_p2).to_html %>
+<%= raw RedCloth.new(I18n.t :home_p3).to_html %>
+<p><%=I18n.t :copyright %></p>
 <% if !signed_in? %>
 <table>
 	<tr>

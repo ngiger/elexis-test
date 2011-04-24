@@ -4,15 +4,17 @@ namespace :db do
     require 'faker'
     Rake::Task['db:reset'].invoke
     addUsers
-    addLicenses
-    addDeployStates
-    addProductModules
-    addProductVersions
-    addTestEnvironments
-    addTestResultType
-    addTestSteps
-    addTestCases
-    addTestSuites
+    if false
+      addProductModules
+      addDeployStates
+      addLicenses
+      addProductVersions
+      addTestEnvironments
+      addTestResultType
+      addTestSteps
+      addTestCases
+      addTestSuites
+    end
   end
 
   def addUsers
