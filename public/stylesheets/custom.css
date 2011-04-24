@@ -20,6 +20,7 @@ section {
   font-size: 120%;
   padding: 20px;
   background: #fff;
+ 
 }
 
 section h1 {
@@ -85,9 +86,9 @@ a.signup_button {
   width: 190px;
   color: #fff;
   background: #006400;
-  font-size: 150%;
+  font-size: 120%;
   font-weight: bold;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Round corners */
@@ -247,3 +248,38 @@ form.new_micropost textarea {
   height: 4em;
   margin-bottom: 0;
 }
+
+/* left side menu bar */
+td.left {
+/*  color: #077; */
+  text-align: right;
+  border: 2px solid #999;
+  float: left;
+}
+
+/* rechts */
+div.rechts {
+/*  color: #077; 
+  border: 2px solid #999; */
+  text-align: right;
+  margin-top: 30px;
+  float: right;
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 300px;
+  width: 80px;
+  
+}
+/* links */
+div.links {
+/*  color: #077; 
+  border: 2px solid #999; */
+  text-align: left;
+  float: left;
+  margin-top: 30px;
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 300px;
+  width: 80px;
+}
+

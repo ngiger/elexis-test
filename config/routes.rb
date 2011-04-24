@@ -1,10 +1,28 @@
 ElexisTest::Application.routes.draw do
+  resources :test_run_suites
+
+  resources :test_suites
+
+  resources :test_cases
+
+  resources :test_steps
+
+  resources :product_versions
+
+  resources :test_result_types
+
+  resources :test_environments
+
+  resources :product_modules
+
+  resources :deploy_states
+
+  resources :license_types
+
   get "product_versions/new"
 
   resources :users
-  resources :sessions, :only => [:new, :create, :destroy]
-  resources :product_versions
-  # get "users/new"
+  resources :sessions, :only => [:new, :create, :destroy]  # get "users/new"
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
