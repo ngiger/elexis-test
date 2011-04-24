@@ -45,5 +45,6 @@ h2. Ideen
 
 * Mehrere Versionen pro Testbeschreibung (d.h. werden besser/genauer)?
 * E-Mail-Adressen vor dem Erfassen des neuen Benutzer verifizieren?
+* Adresse/Telefon-Nummer des Testers anzeigen
 
 

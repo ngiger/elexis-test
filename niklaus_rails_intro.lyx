@@ -1,0 +1,682 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Ruby on Rails
+\end_layout
+
+\begin_layout Standard
+Niklaus Notizen: (Jetzt auf Seite 389) vor den Microposts
+\end_layout
+
+\begin_layout Standard
+(schroot für x86 32-system unter squeeze für rails)
+\end_layout
+
+\begin_layout Standard
+Gemfile
+\end_layout
+
+\begin_layout Standard
+bundle install (rspec-rails >= 2.5.0)
+\end_layout
+
+\begin_layout Standard
+extra indent for private methods in Ruby!
+\end_layout
+
+\begin_layout Standard
+gem FactoryGirl
+\end_layout
+
+\begin_layout Standard
+flash (nach redirect), flash.now (vorher, d.h im gleichen Umfeld, S.
+ 318)
+\end_layout
+
+\begin_layout Standard
+Aptana als Eclipse-Plugin installiert (http://download.aptana.com/tools/studio/plu
+gin/install/studio)
+\end_layout
+
+\begin_layout Standard
+markdown editor
+\end_layout
+
+\begin_layout Standard
+egit plugin 0.11.3 (gut!)
+\end_layout
+
+\begin_layout Standard
+http://textile2html.heroku.com/ (gem install RedCloth)
+\end_layout
+
+\begin_layout Standard
+http://www.buildingwebapps.com/articles/79187-easy-text-formatting-with-textile
+\end_layout
+
+\begin_layout Standard
+textile_styled_text ="h1.
+ This is an example of a heading in Textile" textile_object = RedCloth.new(textil
+e_styled_text) 
+\end_layout
+
+\begin_layout Standard
+html = textile_object.to_html 
+\end_layout
+
+\begin_layout Standard
+(acts_as_textile, textile_editor_helper)
+\end_layout
+
+\begin_layout Standard
+http://redcloth.org/hobix.com/textile/quick.html
+\end_layout
+
+\begin_layout Part
+Install from scratch
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git clone git://github.com/railstutorial/sample_app.git
+\end_layout
+
+\begin_layout Plain Layout
+
+cd sample_app
+\end_layout
+
+\begin_layout Plain Layout
+
+bundle install # Gets only once from rubygems
+\end_layout
+
+\begin_layout Plain Layout
+
+bundle update # if you want to get another/newer
+\end_layout
+
+\begin_layout Plain Layout
+
+rake db:migrate
+\end_layout
+
+\begin_layout Plain Layout
+
+rspec spec # gives 7 errors content/LayoutLinks
+\end_layout
+
+\begin_layout Plain Layout
+
+rails server 
+\end_layout
+
+\begin_layout Plain Layout
+
+konqueror http://localhost:3000/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nützlich: Gemfile, annotate (page 198)
+\end_layout
+
+\begin_layout Standard
+Testing ruby regular expression: http://www.rubular.com/
+\end_layout
+
+\begin_layout Part
+heroku
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+gem install heroku # One time
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku keys:add
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku create # create new app on heroku
+\end_layout
+
+\begin_layout Plain Layout
+
+git push heroku master # populate it, check Gemfile if problems 
+\end_layout
+
+\begin_layout Plain Layout
+
+git push heroku # afterwards
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku open # opens webbroser on you app
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku rename myshortappname
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku rake db:migrate
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku db:push
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku console
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Adding a new table
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rails generate model product_version name:string description:string user_id:inte
+ger 
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate controller ProductVersions new # Achtung auf das 's am Ende
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Scaffolding in rails3.
+ Die Generatoren können auch leicht aus eigenen Templates (Vorlagen sind
+ in http://github.com/rails/rails/tree/master/railties/lib/rails/generators/erb/s
+caffold/templates/ ) gefüttert werden!
+\end_layout
+
+\begin_layout Standard
+http://www.viget.com/extend/rails-3-generators-scaffolding/
+\end_layout
+
+\begin_layout Standard
+http://stackoverflow.com/questions/5384203/rails-3-scaffolding-of-relational-mode
+l
+\end_layout
+
+\begin_layout Standard
+http://asciicasts.com/episodes/216-generators-in-rails-3
+\end_layout
+
+\begin_layout Standard
+Scaffolding aus dem Buch:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rails generate scaffold User name:string email:string
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate scaffold Micropost content:string user_id:integer 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Versuchte dann
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate scaffold ProductVersion name:string description:string remarks:te
+xt  user_id:integer
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate scaffold TestResultType name:string description:string
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate scaffold LicenseType name:string description:string
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate scaffold TestEnvironment name:string description:string
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate scaffold ProductModul name:string description:string 
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+license_type_id:string user_id:integer
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate scaffold TestDescription name:string description:text 
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+criteria:text user_id:integer references:string smoketest:boolean 
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+active:boolen product_module_id:integer test_environment_id:integer estimated_ti
+me:integer 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate scaffold TestExecution   test_description_id:integer remarks:text
+ 
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+user_id:integer when:datetime time_needed:integer test_result_type_id:integer
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate scaffold TestRun product_version_id:integer remarks:text
+ 
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+closed:date  user_id:integer test_execution_id:integer 
+\end_layout
+
+\begin_layout Plain Layout
+
+# Kann mit Hilfe von rails destroy + gleichen Parameter wieder rückgängig
+ gemacht werden
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Testing
+\end_layout
+
+\begin_layout Itemize
+rvm, autotest, spork installieren
+\end_layout
+
+\begin_layout Itemize
+Spork laufen lassen.
+ 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+spork &
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Damit autotest/rspec richtig läuft folgende Dateien erstellen
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+.autotest mit Inhalt
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+require 'autotest/growl'
+\end_layout
+
+\begin_layout Plain Layout
+
+Autotest.add_hook :initialize do
+\end_layout
+
+\begin_layout Plain Layout
+
+	|autotest|
+\end_layout
+
+\begin_layout Plain Layout
+
+	autotest.add_mapping(%r%^spec/(requests)/.*rb$%) do
+\end_layout
+
+\begin_layout Plain Layout
+
+		|filename, _|
+\end_layout
+
+\begin_layout Plain Layout
+
+		filename   
+\end_layout
+
+\begin_layout Plain Layout
+
+	end
+\end_layout
+
+\begin_layout Plain Layout
+
+end 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+.rspec mit Inhalt
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+--colour
+\end_layout
+
+\begin_layout Plain Layout
+
+--drb
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Pending specifications like: it "should require an email address" 
+\end_layout
+
+\begin_layout Itemize
+In rspec: use User.create! (it will raise an exception if anything goes wrong)
+\end_layout
+
+\begin_layout Itemize
+Falls Tests fehlschlagen, auch mal spork stoppen und neu starten, damit
+ er Änderungen mitbekommt (aus dem Gemfile?)
+\end_layout
+
+\begin_layout Part
+HTML-Aussehen konfigurieren
+\end_layout
+
+\begin_layout Itemize
+routing via config/routes.rb
+\end_layout
+
+\begin_layout Itemize
+Pages defaults under app/views/layouts/application.html.erb
+\end_layout
+
+\begin_layout Itemize
+CSS unter public/stylesheets/custom.css
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+app/views/layouts/_stylesheets.html.erb
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Rails Guide 
+\begin_inset Quotes eld
+\end_inset
+
+Rails Routing from the outside in
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+root war etwas trickreicher, folgendes musste gemacht werden
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+root :to => 'pages#home' (in config/routes.rb)
+\end_layout
+
+\begin_layout Itemize
+git rm public/index.html
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Immer für alles rspec generieren, z.B.
+ spec/controllers/users_controller_spec.rb 
+\end_layout
+
+\begin_layout Part
+Datenbank setup/etc
+\end_layout
+
+\begin_layout Itemize
+Uniqueness muss auf Datenbank-Ebene wie folgt erzwungen werden (S.
+ 218):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ rails generate migration add_email_uniqueness_index 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+sqlitebrowser ist fantastisch um Daten anzuschauen!
+\end_layout
+
+\begin_layout Itemize
+rake db:reset (um alle Daten in der DB zu löschen)
+\end_layout
+
+\begin_layout Itemize
+rails generate migration add_password_to_users encrypted_password:string
+ 
+\end_layout
+
+\begin_layout Itemize
+rake db:migrate
+\end_layout
+
+\begin_layout Itemize
+rake db:test:prepare
+\end_layout
+
+\end_body
+\end_document
