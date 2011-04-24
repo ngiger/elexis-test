@@ -286,7 +286,71 @@ rails generate controller ProductVersions new # Achtung auf das 's am Ende
 Scaffolding in rails3.
  Die Generatoren können auch leicht aus eigenen Templates (Vorlagen sind
  in http://github.com/rails/rails/tree/master/railties/lib/rails/generators/erb/s
-caffold/templates/ ) gefüttert werden!
+caffold/templates/ -> lib/templates/erb/scaffold/ ) gefüttert werden!
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mkdir -p lib/templates/erb/scaffold
+\end_layout
+
+\begin_layout Plain Layout
+
+cd lib/templates/erb/scaffold
+\end_layout
+
+\begin_layout Plain Layout
+
+for j in _form edit index new show 
+\end_layout
+
+\begin_layout Plain Layout
+
+do 
+\end_layout
+
+\begin_layout Plain Layout
+
+wget --no-check-certificate --continue 
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+http://github.com/rails/rails/raw/master/
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+railties/lib/rails/generators/erb/scaffold/templates/${j}.html.erb
+\end_layout
+
+\begin_layout Plain Layout
+
+done
+\end_layout
+
+\begin_layout Plain Layout
+
+cd ../../../..
+\end_layout
+
+\begin_layout Plain Layout
+
+git add lib
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
