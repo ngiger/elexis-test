@@ -3,23 +3,13 @@
 <p>
   <b>Name:</b>
   <%= @product_version.name %>
-</p>
-
-<p>
-  <b>Description:</b>
+  <br><b>Description:</b>
   <%= @product_version.description %>
-</p>
+  <br><b>Remarks: </b> <%= raw RedCloth.new(@product_version.remarks).to_html %>
 
-<p>
-  <b>Remarks:</b>
-  <%= @product_version.remarks %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @product_version.user_id %>
-</p>
-
+<%= I18n.t :created_by %>: <%= get_user_name(@product_version.user_id) %>
 
 <%= link_to 'Edit', edit_product_version_path(@product_version) %> |
 <%= link_to 'Back', product_versions_path %>
+</p>
+

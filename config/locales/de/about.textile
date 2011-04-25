@@ -1,0 +1,6 @@
+h1. Zur Elexis-Test Umgebung
+
+Copyright 2011
+*COSRE* GmbH, Yverdon und
+Niklaus Giger <niklaus.giger@member.fsf.org>
+

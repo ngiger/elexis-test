@@ -5,12 +5,7 @@
 <br>
 <%= I18n.t :description %>: <%= product_version.description %><br>
 <%= I18n.t :remarks %>: <%= raw RedCloth.new(product_version.remarks).to_html %><br>
-<%= I18n.t :created_by %>: 
-<% if User.exists?(product_version.user_id) %>
-	<%=  User.find(product_version.user_id).name %> <br>
-<% else %>
-	<b><%= I18n.t :no_such_user_id %>. id = (<%= product_version.user_id %>)  </b>
-<% end %><br>
+<%= I18n.t :created_by %>: <%= get_user_name(product_version.user_id) %><br>
 <%= I18n.t :created_at %>: <%= I18n.l product_version.created_at, :format => "%Y-%m-%d" %><br>
 <%= I18n.t :updated_at %>: <%= I18n.l product_version.updated_at, :format => "%Y-%m-%d" %><br>
 <br>

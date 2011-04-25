@@ -146,8 +146,64 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+Gemäss http://code.meleyal.com/post/3090326224/textile-in-rails-3-views können
+ ganze Dateien gebraucht werden, (3.
+ Textile partials) mit Hilfe von
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# in your view
+\end_layout
+
+\begin_layout Plain Layout
+
+<%= raw textilize render 'about.textile' %> 
+\end_layout
+
+\begin_layout Plain Layout
+
+Ist meine Variante okay ???
+\end_layout
+
+\begin_layout Plain Layout
+
+  def txt(partial)
+\end_layout
+
+\begin_layout Plain Layout
+
+    myName =  Rails.root.join('config/locales', 
+\end_layout
+
+\begin_layout Plain Layout
+
+	I18n.locale.to_s, File.basename(partial).to_s)
+\end_layout
+
+\begin_layout Plain Layout
+
+	raw RedCloth.new(IO.readlines(myName).join).to_html
+\end_layout
+
+\begin_layout Plain Layout
+
+  end 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Install from scratch
+Install from scratch 
 \end_layout
 
 \begin_layout Standard
@@ -617,7 +673,8 @@ Link auf Textile-Quick-Help erzeugen (_form-Template)
 \end_layout
 
 \begin_layout Itemize
-Text-Feler automatisch via RedCloth von textile -> HTML wandeln (_form-Template)
+Text-Felder automatisch via RedCloth von textile -> HTML wandeln (_form-Template
+)
 \end_layout
 
 \end_deeper
@@ -853,5 +910,19 @@ rake db:migrate
 rake db:test:prepare
 \end_layout
 
+\begin_layout Itemize
+rake db:populate
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+per default wir lib/tasks/sample_data.rb aufgerufen.
+\end_layout
+
+\begin_layout Itemize
+https://github.com/ffmike/db-populate ist ein spezielles GEM, das mehr kann
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

@@ -1,8 +1,8 @@
 require 'spec_helper'
 describe "LayoutLinks" do
-  it "at '/' should have Elexis Test" do
+  it "at '/' should have Umgebung" do
     get '/'
-    response.should have_selector('div', :content => "Elexis Test")
+    response.should have_selector('div', :content => "Umgebung, um Elexis leichter zu testen")
   end
   
   it "at '/' should have admin" do
@@ -10,8 +10,8 @@ describe "LayoutLinks" do
     response.should have_selector('div', :content => "Admin")
   end
 
-  it "at '/' should have Demo-Anwendung" do
+  it "at '/' should have COSRE" do
     get '/'
-    response.should have_selector('div', :content => "Demo-Anwendung")
+    response.should have_selector('div', :content => "COSRE")
   end
 end

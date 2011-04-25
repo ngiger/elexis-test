@@ -1,0 +1,10 @@
+h1. Hilfe zur Elexis-Test Umgebung
+
+Für Wünsche/Tipps darf jeder das "Elexis-Test Wiki":https://github.com/ngiger/elexis-test/wiki benutzen!
+Folgendes könnte für Elexis-Benutzer interessant sein:
+# Pro Plug-In kann eine beliebige Anzahl Benutzer registriert werden.
+** Dann weiss man, wer die gleichen Sorgen/Probleme haben könnte.
+# Wenn man ein Problem hat, kann man hier zuerst eine Testbeschreibung erstellen und dann
+** das Problem den "Entwicklern":mailto:elexis-develop@lists.sourceforge.net melden (mit dem Link zur Testbeschreibung)
+
+ 

@@ -1,4 +1,6 @@
 class ProductVersionsController < ApplicationController
+  before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
+
   # GET /product_versions
   # GET /product_versions.xml
   def index
@@ -53,6 +55,7 @@ class ProductVersionsController < ApplicationController
   # PUT /product_versions/1.xml
   def update
     @product_version = ProductVersion.find(params[:id])
+    @product_version.user_id = current_user.id
 
     respond_to do |format|
       if @product_version.update_attributes(params[:product_version])
