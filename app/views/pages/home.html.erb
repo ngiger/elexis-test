@@ -1,8 +1,7 @@
 <h1><%=I18n.t :home_h1 %></h1>
 <%= raw RedCloth.new(I18n.t :home_p1).to_html %>
-<%= raw RedCloth.new(I18n.t :home_p2).to_html %>
-<%= raw RedCloth.new(I18n.t :home_p3).to_html %>
 <p><%=I18n.t :copyright %></p>
+<p>There are <%=  User.count %> users.</p>
 <% if !signed_in? %>
 <table>
 	<tr>

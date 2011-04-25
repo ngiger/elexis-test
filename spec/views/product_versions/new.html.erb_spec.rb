@@ -6,9 +6,7 @@ describe "product_versions/new.html.erb" do
       :name => "MyString",
       :description => "MyString",
       :remarks => "MyText",
-      :user_id => 1,
-      :deploy_state_id => 1,
-      :product_module_id => 1
+      :user_id => 1
     ).as_new_record)
   end
 
@@ -21,8 +19,6 @@ describe "product_versions/new.html.erb" do
       assert_select "input#product_version_description", :name => "product_version[description]"
       assert_select "textarea#product_version_remarks", :name => "product_version[remarks]"
       assert_select "input#product_version_user_id", :name => "product_version[user_id]"
-      assert_select "input#product_version_deploy_state_id", :name => "product_version[deploy_state_id]"
-      assert_select "input#product_version_product_module_id", :name => "product_version[product_module_id]"
     end
   end
 end

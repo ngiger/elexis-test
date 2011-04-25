@@ -106,7 +106,7 @@ egit plugin 0.11.3 (gut!)
 \end_layout
 
 \begin_layout Standard
-http://textile2html.heroku.com/ (gem install RedCloth)
+http://textile2html.heroku.com/ (gem install RedCloth in Gemfile)
 \end_layout
 
 \begin_layout Standard
@@ -131,7 +131,22 @@ html = textile_object.to_html
 http://redcloth.org/hobix.com/textile/quick.html
 \end_layout
 
-\begin_layout Part
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<%= raw RedCloth.new(I18n.t :home_p1).to_html %> 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Install from scratch
 \end_layout
 
@@ -193,7 +208,7 @@ Nützlich: Gemfile, annotate (page 198)
 Testing ruby regular expression: http://www.rubular.com/
 \end_layout
 
-\begin_layout Part
+\begin_layout Section
 heroku
 \end_layout
 
@@ -257,7 +272,7 @@ heroku console
 
 \end_layout
 
-\begin_layout Part
+\begin_layout Section
 Adding a new table
 \end_layout
 
@@ -277,14 +292,77 @@ ger
 rails generate controller ProductVersions new # Achtung auf das 's am Ende
 \end_layout
 
+\begin_layout Plain Layout
+
+rails generate migration add_email_uniqueness_index 
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate integration_test friendly_forwarding 
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate migration add_admin_to_users admin:boolean 
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate rspec:install
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate controller Pages 
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate integration_test layout_links invoke rspec 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate model Micropost content:string user_id:integer 
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate integration_test microposts 
+\end_layout
+
+\begin_layout Plain Layout
+
+rails generate model Relationship follower_id:integer followed_id:integer
+ # Creates a table Relationship
+\end_layout
+
+\begin_layout Plain Layout
+
+rake db:migrate
+\end_layout
+
+\begin_layout Plain Layout
+
+rake db:test:prepare 
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
+\begin_layout Subsection
+Scaffolding in rails3
+\end_layout
+
 \begin_layout Standard
-Scaffolding in rails3.
- Die Generatoren können auch leicht aus eigenen Templates (Vorlagen sind
+Die Generatoren können auch leicht aus eigenen Templates (Vorlagen sind
  in http://github.com/rails/rails/tree/master/railties/lib/rails/generators/erb/s
 caffold/templates/ -> lib/templates/erb/scaffold/ ) gefüttert werden!
 \end_layout
@@ -516,7 +594,40 @@ closed:date  user_id:integer test_execution_id:integer
 
 \end_layout
 
-\begin_layout Part
+\begin_layout Standard
+Folgende Anpassungen gemacht:
+\end_layout
+
+\begin_layout Itemize
+index.html.erb generiert _paginate (Dann muss jeweils noch der <table>_controller.r
+b geändert werden
+\end_layout
+
+\begin_layout Standard
+Fehlt noch:
+\end_layout
+
+\begin_layout Itemize
+Bei Text-Feldern sollten folgende Sachen passieren:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Link auf Textile-Quick-Help erzeugen (_form-Template)
+\end_layout
+
+\begin_layout Itemize
+Text-Feler automatisch via RedCloth von textile -> HTML wandeln (_form-Template)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Scaffold Generator sollte unter views/<myview>/ auch noch automatisch _<myview>.h
+tml.erb für paginate erstellen.
+ (evtl https://github.com/ryanb/nifty-generators#readme benutzen?)
+\end_layout
+
+\begin_layout Section
 Testing
 \end_layout
 
@@ -642,7 +753,7 @@ Falls Tests fehlschlagen, auch mal spork stoppen und neu starten, damit
  er Änderungen mitbekommt (aus dem Gemfile?)
 \end_layout
 
-\begin_layout Part
+\begin_layout Section
 HTML-Aussehen konfigurieren
 \end_layout
 
@@ -695,7 +806,7 @@ Immer für alles rspec generieren, z.B.
  spec/controllers/users_controller_spec.rb 
 \end_layout
 
-\begin_layout Part
+\begin_layout Section
 Datenbank setup/etc
 \end_layout
 

@@ -1,12 +1,9 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+# A lot of the text fields may use the textile markup language
 
 en:
-  hello: "Hello world"
-  home_demo: "This is a small demo how you could test Elexis"
   home_h1:  "Elexis Test Application"
   home_p1:  "Dieses Programm wird von COSRE GmbH, Yverdon, gesponsort."
-  home_p2:  "COSRE will damit die bestmögliche Qualtität der französische Version von Elexis sicherstellen."
-  home_p3:  "Es gibt noch keinen Termin für die französische Version von Elexis."
   copyright: "Copyright 2011 by COSRE Sarl, Yverdon and Niklaus Giger"
 

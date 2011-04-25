@@ -1,4 +1,6 @@
 ElexisTest::Application.routes.draw do
+  resources :product_versions
+
   resources :test_run_suites
 
   resources :test_suites
@@ -6,8 +8,6 @@ ElexisTest::Application.routes.draw do
   resources :test_cases
 
   resources :test_steps
-
-  resources :product_versions
 
   resources :test_result_types
 
