@@ -64,6 +64,15 @@ Ruby on Rails
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Niklaus Notizen: (Jetzt auf Seite 389) vor den Microposts
 \end_layout
 
@@ -103,6 +112,140 @@ markdown editor
 
 \begin_layout Standard
 egit plugin 0.11.3 (gut!)
+\end_layout
+
+\begin_layout Section
+Install from scratch 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+git clone git://github.com/railstutorial/sample_app.git
+\end_layout
+
+\begin_layout Plain Layout
+
+cd sample_app
+\end_layout
+
+\begin_layout Plain Layout
+
+bundle install # Gets only once from rubygems
+\end_layout
+
+\begin_layout Plain Layout
+
+bundle update # if you want to get another/newer
+\end_layout
+
+\begin_layout Plain Layout
+
+rake db:migrate
+\end_layout
+
+\begin_layout Plain Layout
+
+rspec spec # gives 7 errors content/LayoutLinks
+\end_layout
+
+\begin_layout Plain Layout
+
+rails server 
+\end_layout
+
+\begin_layout Plain Layout
+
+konqueror http://localhost:3000/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nützlich: Gemfile, annotate (page 198)
+\end_layout
+
+\begin_layout Standard
+Testing ruby regular expression: http://www.rubular.com/
+\end_layout
+
+\begin_layout Section
+Zusätzliche Tools
+\end_layout
+
+\begin_layout Subsection
+heroku
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+gem install heroku # One time
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku keys:add
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku create # create new app on heroku
+\end_layout
+
+\begin_layout Plain Layout
+
+git push heroku master # populate it, check Gemfile if problems 
+\end_layout
+
+\begin_layout Plain Layout
+
+git push heroku # afterwards
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku open # opens webbroser on you app
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku rename myshortappname
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku rake db:migrate
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku db:push
+\end_layout
+
+\begin_layout Plain Layout
+
+heroku console
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Redcloth/textile
 \end_layout
 
 \begin_layout Standard
@@ -202,130 +345,17 @@ Ist meine Variante okay ???
 
 \end_layout
 
-\begin_layout Section
-Install from scratch 
+\begin_layout Subsection
+haml
 \end_layout
 
 \begin_layout Standard
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-git clone git://github.com/railstutorial/sample_app.git
-\end_layout
-
-\begin_layout Plain Layout
-
-cd sample_app
-\end_layout
-
-\begin_layout Plain Layout
-
-bundle install # Gets only once from rubygems
-\end_layout
-
-\begin_layout Plain Layout
-
-bundle update # if you want to get another/newer
-\end_layout
-
-\begin_layout Plain Layout
-
-rake db:migrate
-\end_layout
-
-\begin_layout Plain Layout
-
-rspec spec # gives 7 errors content/LayoutLinks
-\end_layout
-
-\begin_layout Plain Layout
-
-rails server 
-\end_layout
-
-\begin_layout Plain Layout
-
-konqueror http://localhost:3000/
-\end_layout
-
-\end_inset
-
-
+Aus http://haml-lang.com/
 \end_layout
 
 \begin_layout Standard
-Nützlich: Gemfile, annotate (page 198)
-\end_layout
-
-\begin_layout Standard
-Testing ruby regular expression: http://www.rubular.com/
-\end_layout
-
-\begin_layout Section
-heroku
-\end_layout
-
-\begin_layout Standard
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-gem install heroku # One time
-\end_layout
-
-\begin_layout Plain Layout
-
-heroku keys:add
-\end_layout
-
-\begin_layout Plain Layout
-
-heroku create # create new app on heroku
-\end_layout
-
-\begin_layout Plain Layout
-
-git push heroku master # populate it, check Gemfile if problems 
-\end_layout
-
-\begin_layout Plain Layout
-
-git push heroku # afterwards
-\end_layout
-
-\begin_layout Plain Layout
-
-heroku open # opens webbroser on you app
-\end_layout
-
-\begin_layout Plain Layout
-
-heroku rename myshortappname
-\end_layout
-
-\begin_layout Plain Layout
-
-heroku rake db:migrate
-\end_layout
-
-\begin_layout Plain Layout
-
-heroku db:push
-\end_layout
-
-\begin_layout Plain Layout
-
-heroku console
-\end_layout
-
-\end_inset
-
-
+Ergibt schöner lesbaren HTML-Code (gemäss RailsTutorial gut, aber noch nicht
+ ganz für ein Tutorial empfehlenswert).
 \end_layout
 
 \begin_layout Section
@@ -406,6 +436,100 @@ rake db:migrate
 \begin_layout Plain Layout
 
 rake db:test:prepare 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hier alle für product_versions generierte Dateien:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+./db/migrate/20110425114850_create_product_versions.rb
+\end_layout
+
+\begin_layout Plain Layout
+
+./app/views/product_versions/_product_version.html.erb 
+\end_layout
+
+\begin_layout Plain Layout
+
+./app/models/product_version.rb 
+\end_layout
+
+\begin_layout Plain Layout
+
+./app/controllers/product_versions_controller.rb 
+\end_layout
+
+\begin_layout Plain Layout
+
+./app/helpers/product_versions_helper.rb 
+\end_layout
+
+\begin_layout Plain Layout
+
+./spec/routing/product_versions_routing_spec.rb ./spec/controllers/product_versions
+_controller_spec.rb ./spec/helpers/product_versions_helper_spec.rb 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+und für users
+\end_layout
+
+\begin_layout Plain Layout
+
+/db/migrate/20110416164419_add_password_to_users.rb
+\end_layout
+
+\begin_layout Plain Layout
+
+./app/views/users/_user.html.erb 
+\end_layout
+
+\begin_layout Plain Layout
+
+./app/models/user.rb 
+\end_layout
+
+\begin_layout Plain Layout
+
+./app/controllers/users_controller.rb 
+\end_layout
+
+\begin_layout Plain Layout
+
+./app/helpers/users_helper.rb 
+\end_layout
+
+\begin_layout Plain Layout
+
+./spec/requests/users_spec.rb 
+\end_layout
+
+\begin_layout Plain Layout
+
+./spec/models/user_spec.rb 
+\end_layout
+
+\begin_layout Plain Layout
+
+./spec/controllers/users_controller_spec.rb 
 \end_layout
 
 \end_inset

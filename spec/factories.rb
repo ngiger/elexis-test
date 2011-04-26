@@ -15,4 +15,4 @@ Factory.define :product_version do |product_version|
   product_version.description = "Dummy description"
   product_version.remarks = "Dummy remark"
   product_version.user_id = 1
-end
+end if false

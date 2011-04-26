@@ -1,0 +1,16 @@
+%tr
+  %td{:class => 'main'}
+    %h1
+      = gravatar_for @user
+      %b Name
+      = @user.name
+  %td{:class=>"sidebar round"} 
+    %br
+    %b E-Mail
+    = @user.email
+    %br
+    %b URL
+    = link_to user_path(@user), @user
+    %br
+    %b admin
+    = @user.admin
