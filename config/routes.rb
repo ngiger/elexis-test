@@ -13,10 +13,6 @@ ElexisTest::Application.routes.draw do
 
   resources :test_environments
 
-  resources :product_modules
-
-  resources :deploy_states
-
   resources :license_types
 
   get "product_versions/new"

@@ -1,0 +1,19 @@
+= form_for @product_version do |f|
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :description
+    %br
+    = f.text_field :description
+  %p
+    = f.label :remarks
+    %br
+    = f.text_area :remarks
+  %p
+    = f.label :user_id
+    %br
+    = f.text_field :user_id
+  %p
+    = f.submit

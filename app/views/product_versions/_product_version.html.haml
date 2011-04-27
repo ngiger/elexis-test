@@ -1,0 +1,22 @@
+%b
+  = (I18n.t :version) + ':'
+= product_version.name
+%b
+  = (I18n.t :description) + ':'
+= product_version.description
+%br
+%b
+  = (I18n.t :remarks) + ':' 
+= raw RedCloth.new(product_version.remarks).to_html
+%br
+%b
+  = (I18n.t :created_by) + ':'
+= User.find(product_version.user_id).email
+%br
+%b
+  = (I18n.t :created_at) + ':'
+= product_version.created_at
+%br
+%b
+  = (I18n.t :updated_at) + ':'
+= product_version.updated_at

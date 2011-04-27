@@ -358,6 +358,40 @@ Ergibt schöner lesbaren HTML-Code (gemäss RailsTutorial gut, aber noch nicht
  ganz für ein Tutorial empfehlenswert).
 \end_layout
 
+\begin_layout Standard
+Dazu brauche ich auch noch einen neuen Rspec/Haml-Generator.
+ Siehe z.B.
+\end_layout
+
+\begin_layout Standard
+http://www.railslodge.com/plugins/1018-rspec-haml-scaffold-generator
+\end_layout
+
+\begin_layout Standard
+oder gemäss http://groups.google.com/group/haml/browse_thread/thread/a26e8e92e1564
+921
+\end_layout
+
+\begin_layout Standard
+https://github.com/ryanb/nifty-generators
+\end_layout
+
+\begin_layout Standard
+then use 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rails g nifty:scaffold Recipe name:string index new 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Adding a new table
 \end_layout
@@ -530,6 +564,43 @@ und für users
 \begin_layout Plain Layout
 
 ./spec/controllers/users_controller_spec.rb 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Adding a select box
+\end_layout
+
+\begin_layout Standard
+http://edgeguides.rubyonrails.org/form_helpers.html#making-select-boxes-with-ease
+\end_layout
+
+\begin_layout Standard
+Das kann so einfach werden wie:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<%= collection_select(:person, :city_id, City.all, :id, :name) %>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%= time_zone_select(:person, :time_zone) %>
+\end_layout
+
+\begin_layout Plain Layout
+
+<%= select_date Date.today, :prefix => :start_date %>
 \end_layout
 
 \end_inset

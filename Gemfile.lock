@@ -49,6 +49,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mocha (0.9.12)
+    nifty-generators (0.4.6)
     nokogiri (1.4.4)
     polyglot (0.3.1)
     rack (1.2.2)
@@ -105,6 +107,8 @@ DEPENDENCIES
   faker (= 0.3.1)
   gravatar_image_tag (= 1.0.0.pre2)
   haml
+  mocha
+  nifty-generators
   rails (= 3.0.6)
   rspec (= 2.5.0)
   rspec-rails (>= 2.5.0)

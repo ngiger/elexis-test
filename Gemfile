@@ -16,6 +16,8 @@ group :development do
   gem "rspec-rails", ">= 2.5.0"
   #gem 'rspec-rails', '2.5.0'
   gem 'annotate-models', '1.0.4'
+  gem "nifty-generators"
+#  gem "mocha"  
   gem 'faker', '0.3.1'
  # cannot require faker on heroku, moved inside a task 
 end
@@ -50,3 +52,4 @@ end
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test
