@@ -1,0 +1,12 @@
+%tr
+  %td
+    %b
+      = (I18n.t :license_id) + ':'
+    = test_environment.name
+  %td
+    %b
+      = (I18n.t :description) + ':'
+    = test_environment.description
+  %td
+    = link_to "Edit", edit_test_environment_path(test_environment)
+

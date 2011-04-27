@@ -7,9 +7,9 @@ namespace :db do
     addLicenses
     addDeployStates
     addProductVersions
+    addTestEnvironments
     if false
       addProductModules
-      addTestEnvironments
       addTestResultType
       addTestSteps
       addTestCases

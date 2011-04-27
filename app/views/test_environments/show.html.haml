@@ -1,0 +1,15 @@
+%title "Test Environment"
+
+%p
+  %strong Name:
+  = @test_environment.name
+%p
+  %strong Description:
+  = @test_environment.description
+
+%p
+  = link_to "Edit", edit_test_environment_path(@test_environment)
+  |
+  = link_to "Destroy", @test_environment, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", test_environments_path
