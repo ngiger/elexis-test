@@ -1,7 +1,7 @@
-%h1 All product Versions
+%h1 All product versions
+%p= link_to "New product version", new_product_version_path
 = will_paginate
-%ul{:class => :product_versions} 
-= render @product_versions
+%table
+  %th
+  = render @product_versions
 = will_paginate
-
-%p= link_to "New Product Version", new_product_version_path

@@ -80,7 +80,7 @@ namespace :db do
     te = TestEnvironment.create!(:name =>"rgw",
     :description => "Anonmyisierte DB von rgw")
     te = TestEnvironment.create!(:name =>"Praxis-Test",
-    :description => "Test-Datenbank der Arztpraxi")
+    :description => "Test-Datenbank der Arztpraxis")
   end
 
   def addTestResultType
@@ -101,10 +101,12 @@ namespace :db do
   def addProductVersions
     tr = ProductVersion.create!(:name =>"2.1.2",
     :description => "Elexis. Produktive Version vom April 2011",
-    :remarks     => "Letzte Version von Gerry Weirich. Geloeste Probleme sind: a,b,c")
+    :remarks     => "Letzte Version von Gerry Weirich. Geloeste Probleme sind: \n# Erstes Problem\n# zweites \n# Drittes",
+    :user_id     => 1)
     tr = ProductVersion.create!(:name =>"2.1.5",
     :description => "Elexis 2.1.5. Geplant Ende Juni 2011",
-    :remarks     => "Erste von Niklaus betreute Version. Neu sind: dbcheck, quality feedback, KG-Iatrix, viele Bug-Fixes")
+    :remarks     => "Erste von Niklaus betreute Version. Neu sind: \n# dbcheck \n# quality feedback \n# KG-Iatrix \n# viele Bug-Fixes",
+    :user_id     => 2)
   end
 
   def addTestSteps
