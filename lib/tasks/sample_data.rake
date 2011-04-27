@@ -5,10 +5,10 @@ namespace :db do
     Rake::Task['db:reset'].invoke
     addUsers
     addLicenses
+    addDeployStates
+    addProductVersions
     if false
       addProductModules
-      addDeployStates
-      addProductVersions
       addTestEnvironments
       addTestResultType
       addTestSteps
@@ -101,16 +101,10 @@ namespace :db do
   def addProductVersions
     tr = ProductVersion.create!(:name =>"2.1.2",
     :description => "Elexis. Produktive Version vom April 2011",
-    :remarks     => "Letzte Version von Gerry Weirich. Geloeste Probleme sind: a,b,c",
-    :user_id     => 2,
-    :deploy_state_id => 1,
-    :product_module_id => 1)
+    :remarks     => "Letzte Version von Gerry Weirich. Geloeste Probleme sind: a,b,c")
     tr = ProductVersion.create!(:name =>"2.1.5",
     :description => "Elexis 2.1.5. Geplant Ende Juni 2011",
-    :remarks     => "Erste von Niklaus betreute Version. Neu sind: dbcheck, quality feedback, KG-Iatrix, viele Bug-Fixes",
-    :user_id     => 3,
-    :deploy_state_id => 2,
-    :product_module_id => 1)
+    :remarks     => "Erste von Niklaus betreute Version. Neu sind: dbcheck, quality feedback, KG-Iatrix, viele Bug-Fixes")
   end
 
   def addTestSteps

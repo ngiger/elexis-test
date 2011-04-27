@@ -1,0 +1,12 @@
+%tr
+  %td
+    %b
+      = (I18n.t :deploy_id) + ':'
+    = deploy_state.name
+  %td
+    %b
+      = (I18n.t :description) + ':'
+    = deploy_state.description
+  %td
+    = link_to "Edit", edit_deploy_state_path(deploy_state)
+

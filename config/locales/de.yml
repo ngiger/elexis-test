@@ -8,6 +8,7 @@ de:
   				\n*COSRE* will damit die bestmögliche Qualtität der *französischen* Version von _*Elexis*_ sicherstellen.
   				\nEs gibt noch keinen Termin für die französische Version von Elexis."
   product_versions_all: "Alle Elexis-Versionen"
+  deploy_id: "Zustand der Version"
   license_id: "Lizenzname"
   version: "Version"
   description: "Beschreibung"

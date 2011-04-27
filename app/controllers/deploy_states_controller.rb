@@ -1,6 +1,10 @@
 class DeployStatesController < ApplicationController
+  before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
+
+  # GET /product_versions
+  # GET /product_versions.xml
   def index
-    @deploy_states = DeployState.all
+    @deploy_states = DeployState.paginate(:page => params[:page])
   end
 
   def show
