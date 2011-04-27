@@ -1,0 +1,7 @@
+%h1 All License Types
+= will_paginate
+%ul{:class => :license_types} 
+= render @license_types
+= will_paginate
+
+%p= link_to "New License Type", new_license_type_path

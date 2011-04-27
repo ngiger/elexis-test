@@ -1,0 +1,15 @@
+%title "License Type"
+
+%p
+  %strong Name:
+  = @license_type.name
+%p
+  %strong Description:
+  = @license_type.description
+
+%p
+  = link_to "Edit", edit_license_type_path(@license_type)
+  |
+  = link_to "Destroy", @license_type, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", license_types_path
