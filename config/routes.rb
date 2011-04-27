@@ -1,4 +1,6 @@
 ElexisTest::Application.routes.draw do
+  resources :deploy_states
+
   resources :product_versions
 
   resources :test_run_suites

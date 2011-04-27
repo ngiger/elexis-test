@@ -4,10 +4,10 @@ namespace :db do
     require 'faker'
     Rake::Task['db:reset'].invoke
     addUsers
+    addLicenses
     if false
       addProductModules
       addDeployStates
-      addLicenses
       addProductVersions
       addTestEnvironments
       addTestResultType

@@ -1,9 +1,12 @@
-%b
-  = (I18n.t :license_id) + ':'
-= license_type.name
-%br
-%b
-  = (I18n.t :description) + ':'
-= license_type.description
-%br
-= link_to "Show", show_license_type_path(license_type)
+%tr
+  %td
+    %b
+      = (I18n.t :license_id) + ':'
+    = license_type.name
+  %td
+    %b
+      = (I18n.t :description) + ':'
+    = license_type.description
+  %td
+    = link_to "Edit", edit_license_type_path(license_type)
+

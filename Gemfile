@@ -11,13 +11,14 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
 gem "RedCloth" # to be able to use textile
 gem 'haml'
+gem 'dynamic_form'
 
 group :development do
   gem "rspec-rails", ">= 2.5.0"
   #gem 'rspec-rails', '2.5.0'
   gem 'annotate-models', '1.0.4'
   gem "nifty-generators"
-#  gem "mocha"  
+  gem "mocha"  
   gem 'faker', '0.3.1'
  # cannot require faker on heroku, moved inside a task 
 end
@@ -27,6 +28,7 @@ group :test do
   gem 'webrat' #, '0.7.1'
   gem 'spork', '0.9.0.rc4'
   gem 'factory_girl_rails', '1.0'
+  gem "mocha"  
 end
 
 
