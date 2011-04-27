@@ -1,0 +1,15 @@
+- title "Deploy State"
+
+%p
+  %strong Name:
+  = @deploy_state.name
+%p
+  %strong Description:
+  = @deploy_state.description
+
+%p
+  = link_to "Edit", edit_deploy_state_path(@deploy_state)
+  |
+  = link_to "Destroy", @deploy_state, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", deploy_states_path

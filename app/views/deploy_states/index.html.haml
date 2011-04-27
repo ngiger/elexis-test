@@ -1,0 +1,15 @@
+- title "Deploy States"
+
+%table
+  %tr
+    %th Name
+    %th Description
+  - for deploy_state in @deploy_states
+    %tr
+      %td= deploy_state.name
+      %td= deploy_state.description
+      %td= link_to 'Show', deploy_state
+      %td= link_to 'Edit', edit_deploy_state_path(deploy_state)
+      %td= link_to 'Destroy', deploy_state, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Deploy State", new_deploy_state_path
