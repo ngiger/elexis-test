@@ -1,0 +1,12 @@
+%h1 All product module
+%p= link_to "New product_module", new_product_module_path
+= will_paginate
+%table
+  %th 
+    = (I18n.t :product_id)
+  %th
+    = (I18n.t :description)
+  %th
+    = I18n.t :license_id
+  = render @product_modules
+= will_paginate

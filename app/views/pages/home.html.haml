@@ -1,0 +1,11 @@
+%h1
+  =I18n.t :home_h1
+= raw RedCloth.new(I18n.t :home_p1).to_html
+%p
+  =I18n.t :copyright
+%p
+  = sprintf(I18n.t(:nr_users_is), User.count)
+%p
+  = link_to I18n.t(:signin),  signin_path,  :class => "signup_button round" if !signed_in?
+  = link_to I18n.t(:signup),  signup_path,  :class => "signup_button round" if !signed_in?
+  = link_to I18n.t(:signout), signout_path, :class => "signup_button round" if  signed_in?

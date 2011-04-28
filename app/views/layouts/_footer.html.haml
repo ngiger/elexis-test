@@ -1,0 +1,22 @@
+%footer
+  %nav{:class=>"round"}
+    %ul
+      %li
+      =link_to 'About', about_path
+      %li
+      =link_to 'Contact', contact_path
+      %li
+      = "Eingeloggt als:"+current_user.name.inspect if current_user
+      = if current_user && current_user.admin == true then 
+        %li
+        = link_to 'Version','/product_versions'
+        %li
+        = link_to 'TestSuite','/test_suites'
+        %li
+        = link_to 'Module','/product_modules'
+        %li
+        = link_to 'State','/deploy_states'
+        %li
+        = link_to 'License','/license_types'
+        %li
+        = link_to 'Environment','/test_environments'

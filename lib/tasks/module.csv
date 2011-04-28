@@ -1,0 +1,76 @@
+ch.elexis.features.switzerland.de,Elexis Schweiz (deutsch),Abrechnungs-, eBanking und Diagnoscode-Plugins für Gebrauch in der Deutschschweiz
+ch.medelexis.text.templator,Alternatives Schablonenbasiertes Textsystem,Textsystem für alle Betriebssysteme inkl. Mac
+ch.elexis.laborimport_rischbern,Laborimport RischBern,Laborimport RischBern
+ch.elexis.connect.fuji-dri-chem-3500,Connect Fuji Dri-Chem 3500,Verbindung des Fuji Dri Chem 3500 Analyzers mit Elexis (Kompatibel mit Dri-Chem 4000)
+ch.elexis.noatext,NOAText,Anbindung von OpenOffice an Elexis
+ch.medelexis.galexis,Galexis Bestellungen,Bestellungen bei Galexis
+ch.medshare.ebm,Search in EBM-Guidelines,Search in EBM-Guidelines
+ch.elexis.agenda,Elexis-Agenda,Mehrplatz- und Mehrbenutzerfähige Agenda mit mehreren Views
+ch.elexis.befunde,Elexis-Messwerte,Plugin zur Erfassung und Darstellung beliebiger tabellarischer Messwerte
+ch.elexis.bildanzeige,Elexis Bildanzeige,Einbinden von Verweisen auf Bilder im KG-Text
+ch.elexis.buchhaltung.basis,Elexis Basis-Buchhaltung,Einige einfache Buchhaltungs-Abfragen
+ch.elexis.connect.abxmicros,Elexis-Connect-ABXMicros,Verbindung von Elexis zum Hämatologiegerät Micros ABX
+ch.elexis.connect.afinion,Afinion AS100 Laborgerätanbindung,Verbindung von Elexis zum Afinion AS100 Analyzer
+ch.elexis.connect.rochebaseunit,Roche (Handheld) Base Unit Laborgeräteanbindung,Verbindung von Elexis zur Roche (Handheld) Base Unit
+ch.elexis.connect.mythic,Elexis-Connect-Mythic,Verbindung von Elexis zum Hämatologiegerät Mythic 18
+ch.elexis.connect.reflotron,Roche Reflotron Laborgeräteanbindung,Verbindung von Elexis zum Roche Reflotron
+ch.elexis.connect.swelab,Swelab Alfa Laborgeräteanbindung,Verbindung von Elexis zum Swelab Alfa
+ch.elexis.connect.sysmex,Sysmex Laborgeräteanbindung,Verbindung von Elexis zum Sysmex
+ch.elexis.connect.urilux,Elexis-Connect-Urilux,Verbindung von Elexis zum Analysegerät Urilux S
+ch.elexis.connector.be,BlueEvidence Connector,Datenaustausch mit dem BlueEvidence Webservice
+ch.elexis.covercard,Covercard Plugin,Anbindung an ein Covercard-Lesegerät
+ch.medshare.elexis_directories,medshare Directories,Adressdaten aus dem Internet einlesen
+ch.elexis.eigendiagnosen,Elexis-Eigendiagnosen,Eigendiagnosen (ausserhalb der vordefinierten Systeme) definieren
+ch.elexis.externe_dokumente,Iatrix externe Dokumente,Einfache Einbindung eines beliebigen Dokumentenverzeichnisses (Dateinamen müssen bestimmten Konventionen folgen)
+ch.elexis.global_inbox,Universal-Eingangsbox,Globale Eingangsbox für Dokumente aller Art
+ch.elexis.hnet,Rechnungsübermittlung an H-Clearing,Übermittelt Arztrechnungen an den Rechnungsintermediär H-Clearing
+ch.elexis.icpc.fire,ICPC-Fire,Fire Exporter zum ICPC-Modul
+ch.elexis.icpc,ICPC-2,ICPC-2 Diagnosesystem
+ch.elexis.impfplan,Impfkontrolle und Impfempfehlungen,Ein Plugin zum Verwalten von Impfungen und erstellen von Impfempfehlungen, sowie Drucken von Impfausweisen
+ch.elexis.kassenbuch,Kassenbuch,Einfaches Kassenbuch mit Buchungskategorien
+ch.elexis.laborimport.medics,Laborschnittstelle Medics,Laborschnittstelle Medics
+ch.elexis.laborimport.badena,Laborimport Ärztelabor Badena,Laborimport Labor Badena
+ch.elexis.laborimport.bioanalytica,Laborimport Bioanalytica,Laborimport Labor Bioanalytica HL7
+ch.elexis.laborimport.guentert,Laborimport Güntert,Laborimport Labor Güntert
+ch.elexis.laborimport.hl7.allg,Laborimport HL7,Import von Laborresultaten aus HL7-Dateien
+ch.elexis.laborimport.logolab,Laborimport LogoLab,Laborimport Labor LogoLab
+ch.elexis.laborimport.medica,Laborimport Medica,Laborimport Labor Medica
+ch.elexis.laborimport_krech,Laborimport Krech,Laborimport Labor Prof. Krech
+ch.elexis.laborimport_risch,Laborimport Risch,Laborimport Risch
+ch.elexis.laborimport_unilabs_mittelland,Laborimport Unilabs Mittelland,Laborimport Labor Unilabs Mittelland
+ch.elexis.laborimport_viollier,Laborimport Viollier,Import von Laborresultaten vom Labor Viollier
+ch.elexis.medikamente.bag,Medikamente SL,Medikamentenauswahl basierend auf der Spezialitätenliste
+ch.elexis.mediserv,Mediserv,Übermittelt Arztrechnungen an den Rechnungsintermediär mediserv
+ch.elexis.messages,Praxis-Kurznachrichtensystem,Versenden Sie Kurznachrichten an Mitarbeiter/innen
+ch.elexis.notes,Elexis Notizen,Nicht patientenspezifische Notizen, Merkblätter etc. mit Stichwort- und Themensuche
+ch.elexis.omnivore,Omnivore,Einfaches Dokumentenmanagementsystem zum filesystemzentrierten Import und flacher Speicherung
+ch.elexis.omnivoredirect,Omnivore direct,"Omnivore plus" mit direkter scan-Möglichkeit (Achtung: Nur Windows)
+ch.elexis.omnivore-plus,Omnivore plus,Omnivore plus mit Kategorien und Stichwörtern
+ch.elexis.privatnotizen,Elexis-Privatnotizen,Vertrauliche Notizen in KG-Einträge einbetten
+ch.elexis.privatrechnung,Privatrechnung v1,Einbindung eines Privattarifs in Elexis
+ch.elexis.rezept.zurrose,Rezeptübermittlung "zur Rose",Übermittlung elektronischer Rezepte an "zur Rose"
+ch.elexis.stickynotes,Haftnotizen,Haftnotizen für beliebigen Patientspezifischen, nicht an eine Konsultation gebundenen Freitext
+ch.elexis.timer,Stoppuhr,Ein "digitaler" timer
+ch.medelexis.gcal.sync,Synchronisation Google Calendar,Synchronisiert die Praxis-Agenda mit einem Google-Calendar
+ch.medelexis.konsliste,Medelexis Konsliste,Verbesserte Konsultationenliste
+ch.medelexis.openoffice,Medelexis OpenOffice,Stabile OpenOffice Anbindung
+ch.medelexis.twitter,Medelexis News,Ein Reader für Medelexis Kurznachrichten, aber auch andere Twitter-Tweets
+ch.medelexis.util.provider,Utilities für Medelexis provider,Dies ist nur für Medelexis Provider interessant und nur im Zusammenhang mit einem Provider-Konto
+ch.medelexis.xchange,xCHange,Austausch von KG Daten zwischen Elexis-Installationen und GDT Anlagen
+ch.medshare.connect.abacusjunior,Abacus Junior Laborgerätanbindung,Verbindung von Elexis zum Abacus Junior
+ch.medshare.mediport,Mediport,Abrechnungsplugin für MediPort (Achtung: Zusätzliche Kosten einmalig 500.- für MediData)
+com.actavis.medidirect,Rezept Pharmapool,Elektronische Rezeptübermittlung an Pharmapool
+com.hilotec.elexis.messwerte,Hilotec Messwerte,XML konfigurierbares Messwerte-Plugin
+com.hilotec.elexis.pluginstatistiken,Hilotec Messwerte Statistik,Statistikmodul zu Hilotec-Messwerte
+org.iatrix.help.wiki,Iatrix Help Wiki für Elexis,Anbindung des Iatrix-Wikis an die F1 Taste in jeder View
+org.iatrix.messwerte,Messwerte Iatrix,Verbesserte Labordarstellung (Gruppierungen und nur Parameter, von denen Werte existieren)
+org.iatrix,KG Iatrix,Alternative KG Führung
+Waelti.Statistics,Statistics M. Wälti,Einige einfache Statistik-Abfragen
+ch.elexis.laborimport_analytica,Laborimport Analytica,Import von Laborresultaten vom Labor Analytica
+ch.elexis.laborimport_teamw,Laborimport Team W,Import von Laborresultaten vom Labor Team W
+ch.medelexis.nucleus,Medelexis Nucleus,Die für die Funktion zwingend erforderlichen Medelexis-Kernfunktionen
+ch.weirich.templator.pages,Pages-Prozessor für Medelexis-Text-Templator,Prozessor für das Mac-Textprogramm iWork Pages zum 		Anbinden an Elexis via Text-Templator
+ch.elexis.pdfBills,Rechnungsausgabe nach PDF (BETA!),Gibt Rechnungen als PDF aus (Auch für Mac geeignet).
+ch.medshare.importer.csv,medshare plugin für csv-import nach Elexis,Importiert Patienten und Versicherungen aus einer CSV Datei
+ch.elexis.laborimport_lg1,Laborimport LG1,Laborimport LG1
+ch.elexis.support.dbshaker,Elexis DB-Shaker,Datenbankanonymisierung (ACHTUNG: irreversibel!)

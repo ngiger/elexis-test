@@ -9,7 +9,13 @@ de:
   				\nEs gibt noch keinen Termin für die französische Version von Elexis."
   product_versions_all: "Alle Elexis-Versionen"
   deploy_id: "Zustand der Version"
-  license_id: "Lizenzname"
+  signin:  "Anmelden"
+  signup:  "Neuer Benutzer" 
+  nr_users_is: "Elexis Test kennt %d Benutzer."
+  license_id: "Lizenz"
+  product_add_me: "Ich benutze es!"
+  product_id: "Plug-In"
+  responsible: "Verantworlicher"
   version: "Version"
   description: "Beschreibung"
   remarks: "Bemerkungen"
@@ -17,7 +23,7 @@ de:
   created_at: "Erstellt am"  
   created_by: "Erstellt von"
   no_such_user_id: "Benutzer in Datebank nicht (mehr) vorhanden!"
-  copyright: "Copyright 2011 by COSRE sarl, Yverdon and Niklaus Giger."
+  copyright: "Copyright 2011 by COSRE GmbH, Yverdon, and Niklaus Giger."
  
   date:
     formats:

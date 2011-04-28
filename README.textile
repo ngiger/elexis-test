@@ -47,4 +47,10 @@ h2. Ideen
 * E-Mail-Adressen vor dem Erfassen des neuen Benutzer verifizieren?
 * Adresse/Telefon-Nummer des Testers anzeigen
 
+h1. Entscheidungen
+
+* i18n-Support
+* haml
+* RedCloth for textile
+
 

@@ -4,7 +4,7 @@ cmds = [
   'LicenseType name:string description:string',
 
   'ProductModule name:string description:string ' +
-  ' license_type_id:string user_id:integer',
+  ' license_type_id:string',
 
   'DeployState name:string description:string ',
 

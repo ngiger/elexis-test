@@ -8,8 +8,8 @@ namespace :db do
     addDeployStates
     addProductVersions
     addTestEnvironments
+    addProductModules
     if false
-      addProductModules
       addTestResultType
       addTestSteps
       addTestCases
@@ -72,6 +72,19 @@ namespace :db do
     pm = ProductModule.create!(:name =>"KG-Iatrix",
     :description => "Krankengeschichte von Iatrix",
     :license_type_id => 2)
+    inhalt = IO.readlines(File.dirname(File.expand_path(__FILE__))+"/module.csv")
+    inhalt.each{|line| 
+      row = line.split(',')
+      type = 1
+      symbolicName = row[0]
+      type = 2 if /medelexis/i.match(symbolicName)
+      type = 3 if /medshare/i.match(symbolicName)
+      pm = ProductModule.create!(
+      :name =>row[1],
+      :description => row[2..-1].join(' '),
+      :license_type_id => type)
+    }
+
   end
 
   def addTestEnvironments

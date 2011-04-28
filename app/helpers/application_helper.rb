@@ -11,7 +11,7 @@ module ApplicationHelper
   end
 
   def logo
-    image_tag("logo.png", :alt => "Elexis Test", :class => "round")
+     image_tag("logo.png", :size => "180x30", :alt => "Elexis Test", :class => "round")
   end
 
   def txt(partial)
@@ -26,4 +26,13 @@ module ApplicationHelper
       sprintf("%s: id = %d", I18n.t(:no_such_user_id), id)
     end
   end
+  
+  def get_license(id)
+    if LicenseType.exists?(id) 
+      LicenseType.find(id).name
+    else 
+      sprintf("%s: id = %d", I18n.t(:no_such_license_id), id)
+    end
+  end
+
 end

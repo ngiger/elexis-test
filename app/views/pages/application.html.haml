@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title
+      Elexis Test | = @title
+    = csrf_meta_tag
+  %body
+%table{:class=>"profile", summary=>"Profile information"}
+  %tr
+    %td links
+      = yield
+    %td rechts
+      = yield
+

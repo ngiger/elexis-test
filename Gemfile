@@ -20,6 +20,7 @@ group :development do
   gem "nifty-generators"
   gem "mocha"  
   gem 'faker', '0.3.1'
+  gem 'mysql'
  # cannot require faker on heroku, moved inside a task 
 end
 

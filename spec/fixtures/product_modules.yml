@@ -1,0 +1,9 @@
+one:
+  name: MyString
+  description: MyString
+  license_type_id: MyString
+
+two:
+  name: MyString
+  description: MyString
+  license_type_id: MyString

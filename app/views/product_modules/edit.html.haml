@@ -1,0 +1,15 @@
+%title "Edit Product Module"
+
+= render 'form'
+
+%p
+  %strong Name:
+  = @product_module.name
+%p
+  %strong Description:
+  = @product_module.description
+
+%p
+  = link_to "Show", @product_module
+  |
+  = link_to "View All", product_modules_path

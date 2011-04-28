@@ -1,0 +1,17 @@
+= form_for @product_module do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :description
+    %br
+    = f.text_field :description
+  %p
+    = f.label :license_type_id
+    hier
+    %br
+    = collection_select(:product_module, :license_type_id, LicenseType.all, :id, :name)
+  %p
+    = f.submit

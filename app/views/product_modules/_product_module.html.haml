@@ -1,0 +1,14 @@
+%tr
+  %td
+    = product_module.name
+  %td
+    = product_module.description
+  %td
+    = get_license(product_module.license_type_id)
+  =#  %td
+  =#    = link_to (I18n.t :product_add_me), product_module # add_me_to_product_module_path(product_module)
+  %td
+    = link_to "Show", product_module
+  %td
+    = link_to "Edit", edit_product_module_path(product_module)
+
