@@ -53,4 +53,50 @@ h1. Entscheidungen
 * haml
 * RedCloth for textile
 
+h1. TODO Release 0.1
 
+TestResultType
+ProductVersion muss Liste aller Module bekommen (Relationship?)
+* Knopf zum Anhängen aller Module an eine Version erstellen
+
+Script um für alle Module Defaults für TestBeschrieb & TestSteps erstellen
+* Einstellungen müssen in Ordnung sein
+* Hauptfunktionen des Module beschreiben & testen
+* Drucken? Falls sinnvoll, ist es okay
+* Gibt es selten gemachte, aber wichtige Arbeiten (wie monatlicher Rechnungsdruck, Jahresabschluss. Wenn ja, sind sie in Ordnung
+
+TestPlan (aka Testsuite) für Version erstellen
+* Geht über alle zugehörigen Module, deren TestCases und TestStep
+
+
+h1. TODO for Release 0.2
+ProductVersion 
+* Knopf zum (Klonen aller Module & Testbeschriebe)
+
+TestSteps
+* Anhängen von Screenshots
+
+TestAufwand
+* TestLog (Wer, wiviele Minuten, welche Tabelle, welchen Record bearbeitet
+* Auswertung pro Benutzer
+* Auf Einstiegsseite die besten 5 anzeigen
+
+Testplan auswerten
+* Übersicht
+** %-Zahl getesteter Module
+** %-Zahl getesteter Test-Cases
+** %-Zahl getesteter Test-Steps
+** Jeweils auch % pro TestResultType
+
+StyleSheets:
+* Testplan, etc mit kleiner Schrift & grösseren Sachen
+
+Auswahl für lange Listen realisieren
+
+h1. TODO for Release 0.3
+
+* Implizite Geschichte der TestBeschreibungen,
+** TestCase/TestStep bearbeitet auch Vorlage
+** Beim Abschluss des Tests wird der Inhalt in die Vorlage kopiert
+   (Was, wenn mehrere Benuzter, mehrere Versionen in der Arbeit sind??) 
+   

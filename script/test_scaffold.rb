@@ -1,17 +1,17 @@
 #!/usr/bin/env ruby
 
 cmds = [
-  'LicenseType name:string description:string',
+#  'LicenseType name:string description:string',
 
-  'ProductModule name:string description:string ' +
-  ' license_type_id:string',
+#  'ProductModule name:string description:string ' +
+#  ' license_type_id:string',
 
-  'DeployState name:string description:string ',
+#  'DeployState name:string description:string ',
 
-  'ProductVersion name:string description:string remarks:text  '+
-  ' user_id:integer deploy_state_id:integer product_module_id:integer',
+#  'ProductVersion name:string description:string remarks:text  '+
+#  ' user_id:integer deploy_state_id:integer product_module_id:integer',
 
-  'TestEnvironment name:string description:string',
+#  'TestEnvironment name:string description:string',
 
   'TestResultType name:string description:string',
   

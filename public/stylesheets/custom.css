@@ -1,5 +1,5 @@
 .container {
-  width: 710px;
+  width: 1024px;
 }
 
 body {
@@ -24,7 +24,7 @@ section {
 }
 
 section h1 {
-  font-size: 200%;
+  font-size: 150%;
 }
 
 /* Links */
