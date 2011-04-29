@@ -19,7 +19,6 @@ group :development do
   gem 'annotate-models', '1.0.4'
   gem "nifty-generators"
   gem "mocha"  
-  gem 'faker', '0.3.1'
   gem 'mysql'
  # cannot require faker on heroku, moved inside a task 
 end
